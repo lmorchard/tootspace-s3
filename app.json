@@ -7,7 +7,8 @@
     "ACCESS_KEY_ID": "",
     "SECRET_ACCESS_KEY": "",
     "REGION": "us-east-1",
-    "BUCKET": "tootr",
+    "BUCKET": "toots-dev.lmorchard.com",
+    "STATIC_BASE_URL": "http://toots-dev.lmorchard.com/",
     "SIGNATURE_TIMEOUT": 30000,
     "MAX_CONTENT_LENGTH": 500000,
     "S3_BASE_URL": "https://s3.amazonaws.com/"
