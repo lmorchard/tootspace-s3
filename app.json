@@ -1,0 +1,15 @@
+{
+  "name": "tootspace-s3",
+  "description": "A small server for brokering write access to a shared Amazon S3 bucket using Login with Amazon.",
+  "repository": "https://github.com/lmorchard/tootspace-s3",
+  "keywords": ["node", "express", "static", "toots"],
+  "env": {
+    "ACCESS_KEY_ID": "",
+    "SECRET_ACCESS_KEY": "",
+    "REGION": "us-east-1",
+    "BUCKET": "tootr",
+    "SIGNATURE_TIMEOUT": 30000,
+    "MAX_CONTENT_LENGTH": 500000,
+    "S3_BASE_URL": "https://s3.amazonaws.com/"
+  }
+}

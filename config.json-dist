@@ -1,0 +1,14 @@
+{
+  "PORT": 2443,
+  "SSL_ENABLED": false,
+  "SSL_KEY": "",
+  "SSL_CERT": "",
+  "ACCESS_KEY_ID": "",
+  "SECRET_ACCESS_KEY": "",
+  "REGION": "us-east-1",
+  "BUCKET": "tootr",
+  "STATIC_BASE_URL": "http://toots-dev.lmorchard.com/",
+  "SIGNATURE_TIMEOUT": 30000,
+  "MAX_CONTENT_LENGTH": 500000,
+  "S3_BASE_URL": "https://s3.amazonaws.com/"
+}

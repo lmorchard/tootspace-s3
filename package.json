@@ -1,0 +1,22 @@
+{
+  "name": "tootspace-s3",
+  "version": "0.0.1",
+  "description": "A small server for brokering shared write access to an Amazon S3 bucket",
+  "main": "index.js",
+  "scripts": {
+    "server-watch": "./node_modules/.bin/supervisor server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "body-parser": "~1.9.2",
+    "express": "~4.10.1",
+    "knox": "~0.9.1",
+    "cors": "~2.5.1"
+  },
+  "devDependencies": {
+    "supervisor": "~0.6.0"
+  }
+}
