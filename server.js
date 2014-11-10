@@ -33,6 +33,13 @@ var app = express();
 
 app.use(bodyParser.json());
 
+app.all('*', function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.options('/register', cors());
 
 app.post('/register', cors(), function (req, res) {
@@ -40,10 +47,9 @@ app.post('/register', cors(), function (req, res) {
   var access_token = req.body.AccessToken;
 
   fetchAmazonProfile(access_token, function (err, resp, body) {
+
     if (body.error) {
-      body.toktoktok=access_token;
-      body.req = req.body;
-      return res.status(200).send(body);
+      return res.status(403).send(body);
     }
 
     var profile = body;
@@ -106,7 +112,7 @@ app.post('/register', cors(), function (req, res) {
 
 app.options('/presigned', cors());
 
-app.post('/presigned', function (req, res) {
+app.post('/presigned', cors(), function (req, res) {
 
   var content_type = req.body.ContentType;
   var path = req.body.Path;
