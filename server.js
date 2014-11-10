@@ -1,13 +1,12 @@
 var url = require('url');
 var fs = require('fs');
 var qs = require('querystring');
-var express = require('express');
-var request = require('request');
-var cors = require('cors');
-var knox = require('knox');
-var bodyParser = require('body-parser');
 var util = require('util');
 var crypto = require('crypto');
+var express = require('express');
+var request = require('request');
+var knox = require('knox');
+var bodyParser = require('body-parser');
 var _ = require('lodash');
 
 var config = loadConfig(__dirname + '/config.json', {
@@ -40,9 +39,7 @@ app.all('*', function (req, res, next) {
   next();
 });
 
-app.options('/register', cors());
-
-app.post('/register', cors(), function (req, res) {
+app.post('/register', function (req, res) {
   var nickname = req.body.nickname;
   var access_token = req.body.AccessToken;
 
@@ -110,9 +107,7 @@ app.post('/register', cors(), function (req, res) {
 
 });
 
-app.options('/presigned', cors());
-
-app.post('/presigned', cors(), function (req, res) {
+app.post('/presigned', function (req, res) {
 
   var content_type = req.body.ContentType;
   var path = req.body.Path;
