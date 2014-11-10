@@ -2,6 +2,11 @@
   "name": "tootspace-s3",
   "version": "0.0.1",
   "description": "A small server for brokering shared write access to an Amazon S3 bucket",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": "https://github.com/lmorchard/tootspace-s3.git",
+  "homepage": "https://github.com/lmorchard/tootspace-s3",
   "main": "index.js",
   "scripts": {
     "server-watch": "./node_modules/.bin/supervisor server.js",
