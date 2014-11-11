@@ -12,12 +12,12 @@ What's this thing for?
 I want to find a way for apps (like [Tootr][]) to [publish to the
 web][apppublishing] using a simple UX and API.
 
-Amazon S3 offers a nice publishing API usable from web apps. But,
+[Amazon S3][] offers a nice publishing API usable from web apps. But,
 authentication with that AWS is tough in terms of general user experience.
 Remembering and entering long random alphanumeric strings is troublesome,
 especially on mobile devices.
 
-Login with Amazon offers a decent user experience for authentication. And, it
+[Login with Amazon][] offers a decent user experience for authentication. And, it
 can be used to [generate temporary credentials that work with Amazon
 S3][mobilestorage] when the appropriate roles and permissions are configured in
 Amazon IAM. 
@@ -56,6 +56,8 @@ openssl req -new -key key.pem -out csr.pem
 openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
 ```
 
+[Amazon S3]: http://aws.amazon.com/s3/
+[Login with Amazon]: http://login.amazon.com/
 [Tootr]: https://github.com/lmorchard/tootr
 [apppublishing]: http://blog.lmorchard.com/2014/10/09/separating-publishing-from-hosting-on-the-web/
 [mobilestorage]: https://aws.amazon.com/articles/4617974389850313
